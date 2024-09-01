@@ -12,9 +12,14 @@ import foodRoutes from "./routes/food.routes.mjs"
 import reservationRoutes from "./routes/reservation.routes.mjs"
 import orderRoutes from "./routes/order.routes.mjs"
 import paymentRoutes from "./routes/payment.routes.mjs"
+import cors from "cors"
 
 app.use(cookieParser())
 app.use(express.json())
+app.use(cors({
+    origin: "*",
+    credentials: true
+}))
 app.use("/api/food", foodRoutes)
 app.use("/api/reservation", reservationRoutes)
 app.use("/api/auth", authRoutes)
