@@ -25,7 +25,7 @@ app.use("/api/reservation", reservationRoutes)
 app.use("/api/auth", authRoutes)
 app.use("/api/user", userRoutes)
 app.use("/api/order", orderRoutes)
-app.use("/api/payment", paymentRoutes)
+app.use("/api/", paymentRoutes)
 
 app.listen(PORT, () => {
     console.log(`Server is listening on PORT:${PORT}`);

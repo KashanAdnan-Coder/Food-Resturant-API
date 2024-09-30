@@ -1,7 +1,7 @@
 import express from "express"
-// import { createCheckoutSession } from "../controller/payment.controller.mjs"
+import handler from "../controller/payment.controller.mjs"
 const router = express.Router()
 
-// router.post("/pay", )
+router.post("/checkout_sessions", handler)
 
 export default router       
